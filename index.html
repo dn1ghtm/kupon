@@ -45,7 +45,7 @@ body{
     outline: none;
 
 }
-.copy-text a{
+.copy-text button{
     padding: 10px;
     align-items: center;
     background-color: #5784f5;
@@ -57,7 +57,7 @@ body{
     border-radius: 10px;
     cursor: pointer;
 }
-.copy-text a:active{
+.copy-text button:active{
     background: #809ce2;
 
 }
@@ -78,25 +78,51 @@ body{
         </div>
         <div class="copy-text">
             <input type="text" id="text" class="text" placeholder="Giftcard redeem code">
-            <a href="https://aly.hu" onclick="return checkPassword();"><ion-icon name="enter"></ion-icon></a>
+            <button onclick="checkPasswordDoji(), checkPasswordAnya()">
+                <ion-icon name="enter"></ion-icon>
+            </button>
             
         </div>
     </div>
 
 <script>
-    function checkPassword() {
+    function checkPasswordDoji() {
    var password = document.getElementById("text");
    var passwordText = password.value;
-   if(passwordText == "Ernest300") {
-    return true;
-   }
-   error();
-   return false;
-   }
+   if(passwordText == "kjb3e96sw2") {
+    location = 'link';
+    noerror();
+    
+}else{
+    error();
+}
+
+
+if(passwordText == "uwu") {
+    location = 'link';
+    noerror();
+ }else{
+    if(passwordText == "kjb3e96sw2"){
+        noerror();
+    }
+    error();
+ }
+
+    }
+
+
+
+    
+
    function error(){
     var p = document.getElementById("error");
     p.classList.add("active");
    }
+   function noerror(){
+    var pe = document.getElementById("error");
+    pe.classList.remove("active");
+   }
+  
 </script>
 
     <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
