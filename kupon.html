@@ -1,0 +1,105 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="css/copy.css">
+    <style>
+        *{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+body{
+    font-family: "Roboto", sans-serif;
+    background: #f0f2f7;
+
+}
+.container{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+
+}
+.label{
+    padding: 10px;
+    font-size: 18px;
+    color: #111;
+}
+.copy-text{
+    position: relative;
+    padding: 10px;
+    background: #fff;
+    border: 1px solid #ddd;
+    border-radius: 10px;
+    display: flex;
+}
+.copy-text input.text{
+    padding: 10px;
+    font-size: 18px;
+    color: #555;
+    border: none;
+    outline: none;
+
+}
+.copy-text a{
+    padding: 10px;
+    align-items: center;
+    background-color: #5784f5;
+    color: #fff;
+    text-decoration: none;
+    font-size: 25px;
+    border: none;
+    outline: none;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.copy-text a:active{
+    background: #809ce2;
+
+}
+.error{
+    opacity: 0;
+}
+.error.active{
+    opacity: 1;
+    color: red;
+}
+    </style>
+</head>
+<body>
+    <div class="container">
+        <div class="label">
+            Giftcard redeem
+            <p id="error" class="error">Giftcard not found!</p>
+        </div>
+        <div class="copy-text">
+            <input type="text" id="text" class="text" placeholder="Giftcard redeem code">
+            <a href="https://aly.hu" onclick="return checkPassword();"><ion-icon name="enter"></ion-icon></a>
+            
+        </div>
+    </div>
+
+<script>
+    function checkPassword() {
+   var password = document.getElementById("text");
+   var passwordText = password.value;
+   if(passwordText == "Ernest300") {
+    return true;
+   }
+   error();
+   return false;
+   }
+   function error(){
+    var p = document.getElementById("error");
+    p.classList.add("active");
+   }
+</script>
+
+    <script type="module" src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.esm.js"></script>
+    <script nomodule src="https://unpkg.com/ionicons@5.5.2/dist/ionicons/ionicons.js"></script>
+</body>
+</html>
