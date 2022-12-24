@@ -3,7 +3,7 @@ function checkPassword() {
     var passwordText = password.value;
     var lenght = passwordText.lenght;
     if(passwordText == "kjb3e96sw2") {
-     location = 'link';
+     location = 'pages/doji/index.html';
      noerror();
  }else{
      error();
