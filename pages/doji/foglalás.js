@@ -6,5 +6,5 @@ const masodik = document.getElementsById("2.");
 const harmadik = document.getElementById("3.");
 
 function teszt(){
-    alert("Lefoglalva!")
+    alert("Lefoglalva!");
 }
