@@ -8,8 +8,8 @@ function checkPassword() {
  }else{
      error();
  }
- if(passwordText == "uwu") {
-     location = 'pages/hi.html';
+ if(passwordText == "aUeZZy3r") {
+     location = 'pages/anya/index.html';
      noerror();
   }else{
      if(passwordText == "kjb3e96sw2"){
